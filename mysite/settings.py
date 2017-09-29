@@ -90,7 +90,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = "Ukraine/Kyiv"
+TIME_ZONE = "UTC+3"
 
 USE_I18N = True
 
