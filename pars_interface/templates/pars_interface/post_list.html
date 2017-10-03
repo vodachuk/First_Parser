@@ -1,37 +1,12 @@
-<html>
-	<head>
-		<title>Team parser</title>
-	</head>
-	<body>
-		<div>
-			<h1><a href="">Team parser</a></h1>
-		</div>
-		{% for post in posts %}
-			<div>
-				<p>published: {{ post.published_date }}</p>
-				<h1><a href="">{{ post.title }}</a></h1>
-				<p>{{ post.text|linebreaksbr }}</p>
+{% extends 'pars_interface/base.html' %}
+{% block content %}
+	{% for post in posts %}
+		<div class="post">
+			<div class="date">
+				{{ post.published_date }}
 			</div>
-		{% endfor %}
-		<TABLE>
-			<THEAD>
-				<TR>
-					<TH>TH_EXAMPLE</TH>
-				</TR>
-			</THEAD>
-			<TBODY>
-				<TR>
-					<TD>TD_EX_TBODY</TD>
-				</TR>
-				<TR>
-					<TD>TD_TBODY</TD>
-				</TR>
-			</TBODY>
-			<TFOOT>
-				<TR>
-					<TD>TD_EX!!!</TD>
-				</TR>
-			</TFOOT>
-		</TABLE>
-	</body>
-</html>
+			<h1><a href="">{{ post.title }}</a></h1>
+			<p>{{ post.text|linebreaksbr }}</p>
+		</div>
+	{% endfor %}
+{% endblock %}
